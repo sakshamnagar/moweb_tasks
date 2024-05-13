@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'static/styles/styles.css'%}">
+</head>
+<body>
+
+<h1>Fruits</h1>
+{% if fruits %}
+    {% for i in fruits %}
+        <h5>{{i.name}} X {{i.quantity}}</h5> 
+    {% endfor %}
+{% else %}
+    <h4>No Fruits</h4>
+{% endif %}
+
+<br>
+<br>
+
+<h1>Vegitables</h1>
+{% if vegitables %}
+    {% for i in vegitables %}
+        <h5>{{i.name}} X {{i.quantity}}</h5>
+    {% endfor %}
+{% else %}
+    <h4>No Vegitables</h4>
+{% endif %}
+
+</body>
+</html>
+
+
